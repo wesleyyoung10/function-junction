@@ -10,15 +10,16 @@ After completing this assignment, you should be able to:
 
 Instructions
 
-1. Fork [this repository](https://gibhub.com/tiy-tpa-fee/function-junction) to your own account.
-2. Change into today's directory: `take ~/tiy/week-3/day-1`
+1. Fork [this repository](https://github.com/tiy-tpa-fee/function-junction) to your own account.
+2. Change into your TIY directory: `cd ~/tiy`
 3. Clone your repository: `hub clone function-junction`
 4. Change into your project's directory: `cd function-junction`
-5. Install the dependencies: `yarn` or `npm install`
+5. Install the dependencies: `yarn install` (or just `yarn` for short)
 6. Open in Atom: `atom .`
-7. Start test runner: `yarn test` or `npm test`
+7. Start the test runner: `yarn test`
 7. Open `src/functions.test.js` and work on functions until tests pass.
-8. Commit and push your work to github.
+8. Commit and push your work to GitHub.
+9. Turn in the URL to your GitHub repo.
 
 ## Normal Mode
 
