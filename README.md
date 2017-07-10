@@ -6,9 +6,7 @@ After completing this assignment, you should be able to:
 
 * Demonstrate understanding of types, functions, argument-handling, loops, and conditional statements
 
-## Details
-
-Instructions
+## Instructions
 
 1. Fork [this repository](https://github.com/tiy-tpa-fee/function-junction) to your own account.
 2. Change into your TIY directory: `cd ~/tiy`
@@ -21,7 +19,7 @@ Instructions
 8. Commit and push your work to GitHub.
 9. Turn in the URL to your GitHub repo.
 
-## Normal Mode
+## Explorer Mode
 
 - All tests passing
 - No linter warnings
