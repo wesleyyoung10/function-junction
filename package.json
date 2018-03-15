@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "start": "npm test",
-    "test": "ava --fail-fast --serial --watch"
+    "test": "ava --fail-fast --serial --watch --inspect-brk"
   },
   "dependencies": {
     "ava": "^0.18.2",

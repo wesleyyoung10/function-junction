@@ -6,12 +6,49 @@
 
 // ...
 
+function max(x, y) {
+
+  if (x > y) {
+
+    return x;
+
+  } else {
+
+    return y;
+  }
+}
+
 /**
  * Define a function maxOfThree() that takes three
  * numbers as arguments and returns the largest of them.
  */
 
 // ...
+
+const maxOfThree = (x, y, z) => {
+
+  if (x > y) {
+
+    if (x > z) {
+
+      return x;
+
+    } else {
+
+      return z;
+    }
+  } else {
+
+    if (y > z) {
+
+      return y;
+
+    } else {
+
+      return z;
+    }
+  }
+}
 
 /*
  * Define a function sum() that takes two numbers as
@@ -20,12 +57,33 @@
 
 // ...
 
+const sum = (x, y) => {
+
+  return x + y;
+}
+
 /*
  * Define a function sumOfArray that calculates the sum of
  * all the numbers in an array.
  */
 
 // ...
+
+
+var sumOfArray = (array) => {
+
+  var result = 0;
+
+  for (var i = 0; i < array.length; i++) {
+
+    result = result + array[i];
+
+
+  }
+
+  return result;
+}
+
 
 /**
  * Write a function isVowel() that takes a character (i.e. a string of length 1)
@@ -34,16 +92,60 @@
 
 // ...
 
- /**
-  * Write a function rovarspraket() that will translate
-  * a text into a "rövarspråket". That is, double every
-  * consonant and place an occurrence of "o" in between.
-  *
-  * For example, rovarspraket("this is fun") should
-  * return the string "tothohisos isos fofunon".
-  */
+var isLetter = function(letter) {
+  return letter.toLowerCase() != letter.toUpperCase();
+}
+
+var isVowel = function(letter) {
+
+  letter = new String(letter);
+
+  var vowels = ["a", "e", "i", "o", "u"];
+
+  for (var i = 0; i < vowels.length; i++) {
+
+    if (letter.toLowerCase() === vowels[i]) {
+
+      return true;
+    }
+  }
+
+  return false;
+};
+
+/**
+ * Write a function rovarspraket() that will translate
+ * a text into a "rövarspråket". That is, double every
+ * consonant and place an occurrence of "o" in between.
+ *
+ * For example, rovarspraket("this is fun") should
+ * return the string "tothohisos isos fofunon".
+ */
 
 // ...
+
+var rovarspraket = function (input) {
+
+  input = new String(input);
+
+  var result = "";
+
+  for (var i = 0; i < input.length; i++) {
+
+    if (isVowel(input[i]) || isLetter(input[i]) == false) {
+
+      result = result + input[i];
+
+    } else {
+
+      result = result + input[i] + "o" + input[i];
+    }
+
+    console.log(result);
+  }
+
+  return result;
+}
 
 /**
  * Define a function reverse() that computes
@@ -54,14 +156,41 @@
 
 // ...
 
- /**
-  * Write a function findLongestWord() that takes an
-  * string returns the first, longest word in the array.
-  *
-  * i.e. findLongestWord("book dogs") should return "book"
-  */
+var reverse = function (input) {
+
+  var result = "";
+
+  for (var i = input.length - 1; i > -1; i--) {
+
+    result = result + input[i];
+  }
+  return result;
+}
+
+/**
+ * Write a function findLongestWord() that takes an
+ * string returns the first, longest word in the array.
+ *
+ * i.e. findLongestWord("book dogs") should return "book"
+ */
 
 // ...
+
+var findLongestWord = function (sentence) {
+
+  var input = sentence.split(' ');
+
+  var result = "";
+
+  for (var i = 0; i < input.length; i++) {
+
+    if (input[i].length > result.length) {
+
+      result = input[i];
+    }
+  }
+  return result;
+}
 
 /**
  * NOTE: Don't modify anything below this line...
@@ -124,7 +253,7 @@ test('reverse()', (t) => {
 
 test('findLongestWord()', (t) => {
   t.is(findLongestWord('book dogs'), 'book')
-  t.is(findLongestWord('everything'), 'life the universe and everything')
+  t.is(findLongestWord('life the universe and everything'), 'everything')
 })
 
 /* eslint-enable */
